@@ -22,15 +22,16 @@ struct book
     float value;
 };
 
+// 注意强制类型转换的问题，float->int会导致结果未知
 int main(void)
 {
     struct complex c1 = {1, 2};
 
-    printf("%d %d\n", c1.real, c1.imag);
+    printf("%f %f\n", c1.real, c1.imag);
 
     struct book b1 = {"Tom", "Bok", 12.1};
 
-    printf("%s,%d\n", b1.title, b1.value);
+    printf("%s,%f\n", b1.title, b1.value);
 
     return 0;
 }
